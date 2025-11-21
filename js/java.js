@@ -1,18 +1,15 @@
-let myVariable;
-myVariable = "profileForm"
-let hobby = document.querySelectorAll('input[type="checkbox"]'); let submit = document.getElementById('submitBtn');
+const submit = document.getElementById('submitBtn');
+const nameInput = document.getElementById('nameInput');
+const ageInput = document.getElementById('ageInput');
+const colorInput = document.getElementById('colorInput');
+const output = document.getElementById('output');
 
-let color = document.getElementById('colorInput');
-let nameText = document.getElementById('nameInput'); let age = document.getElementById('ageInput');
+submit.addEventListener('click', function () {
+    const name = nameInput.value.trim();
+    const age = ageInput.value;
+    const color = colorInput.value;
 
-let profile = document.getElementById("profileForm");
-
-const myElementVariable = document.getElementById("output");
-console.log(myElementVariable);
-
-submit.addEventListener('click', getInfo);
-function getInfo(){
-12
-}
-let pet = document.querySelectorAll('input[type="radio"]');
-console.log(nameText.value);
+    output.innerHTML = 'Name: ' + name +
+        '<br>Age: ' + age +
+        '<br>Favorite Color: ' + color;
+});
